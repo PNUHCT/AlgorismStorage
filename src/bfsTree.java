@@ -33,7 +33,7 @@ public class bfsTree {
         return result;
     }
 
-    //아래 클래스의 내용은 수정하지 말아야 합니다.
+    //아래는 트리구조
     public static class tree {
         private String value;
         private ArrayList<tree> children;
