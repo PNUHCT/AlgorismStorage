@@ -1,6 +1,6 @@
 import java.util.*;
 
-// 배열 합쳐버림
+// 배열 합쳐버리는 방법
 import static java.util.Arrays.copyOf;
 
 public class getItemFromTwoSortedArrays {
