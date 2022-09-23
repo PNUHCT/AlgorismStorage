@@ -4,6 +4,7 @@ public class reference {
     public static void main(String[] args) {
         int[] output = insertionSort(new int[]{3, 1, 21});
         System.out.println(Arrays.toString(output));
+
     }
 
     /** 최적화를 적용한 코드
