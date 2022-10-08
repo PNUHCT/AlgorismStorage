@@ -29,7 +29,6 @@ public class insertionSort {
         return output;
     }
 
-
     // 최대길이가 1000이상인 자연수의 배열을 정렬해야 하는 경우
     public static int[] insertionSort2(int[] arr) {
         for (long index = 1; index < arr.length; index++) {
