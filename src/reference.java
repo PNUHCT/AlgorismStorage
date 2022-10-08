@@ -5,13 +5,17 @@ public class reference {
         int[] output = insertionSort(new int[]{3, 1, 21});
         System.out.println(Arrays.toString(output));
 
+        int [] input = new int[10000];
+        for(int i = 0 ; i < 10000 ; i++) input[i] = i;
+        int[] output1 = insertionSort(input);
+        System.out.println(Arrays.toString(output1));
     }
 
-    /** 최적화를 적용한 코드
-     * 삽입정렬에서 기존 정렬 과정에서 이미 정렬이 이루어진 범위보다 큰 수를 비교할 경우,
-     * 앞서서 이미 정렬한 숫자와 비교할 필요가 없습니다.
-     * 불필요한 과정을 줄일 수 있는 최적화 과정이 적용된 코드입니다. **/
-
+    /*
+      최적화를 적용한 코드
+      : 이미 정렬된 숫자보다 큰 수를 비교하는 경우를 제거함으로써,
+        불필요한 처리과정을 최소화  
+    */
     public static int[] insertionSort(int[] arr) {
         for (int index = 1; index < arr.length; index++) {
             int target = index;
