@@ -9,12 +9,13 @@ public class LIS {
         System.out.println(output); // --> 3 (3, 10, 20)
     }
 
+    // 모든 부분 배열을 ArrayList에 받아 비교하는 부분
     public static int LIS(int[] input) {
         int max = 1;
         Stack<Integer> stack = new Stack<>();
         ArrayList<int[]> list = new ArrayList<>();
 
-        search(stack, 0, input, max, list);
+        search(stack, 0, input, list);
 
         for(int i = 0; i < list.size(); i++) {
             int[] tempArr = list.get(i);
@@ -26,7 +27,8 @@ public class LIS {
         return max;
     }
 
-    private static void search(Stack<Integer> stack, int k, int[] input, int max, ArrayList<int[]> list) {
+    // 모든 부분 배열을 생성해서 ArrayList에 담아주는 부분
+    private static void search(Stack<Integer> stack, int k, int[] input, ArrayList<int[]> list) {
         if(k >= input.length) {
             int[] temp = new int[stack.size()];
             Stack<Integer> stack2 = new Stack<>();
@@ -41,10 +43,10 @@ public class LIS {
         }
         else {
             stack.add(input[k]);
-            search(stack, k + 1, input, max, list);
+            search(stack, k + 1, input, list);
 
             stack.pop();
-            search(stack, k + 1, input, max, list);
+            search(stack, k + 1, input, list);
         }
     }
 }
