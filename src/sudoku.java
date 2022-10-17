@@ -72,7 +72,7 @@ public class sudoku {
             rowCheck[y][i] = true;
             colCheck[x][i] = true;
             squCheck[y/3*3+(x/3)][i] = true;
-            result[y][x] = i;
+            result[y][x] = i; //
 
             // 다음 빈칸으로
             if(tracking(count+1)) return true;
